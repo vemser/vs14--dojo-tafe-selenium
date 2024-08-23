@@ -7,8 +7,8 @@ public class DataFakerGeneretor {
     // instanciar a ferramenta Faker
     private static final Faker faker = new Faker();
 
-    public String emailFaker(){
-        return faker.internet().emailAddress();
+    public String usernameFaker(){
+        return faker.name().username();
     }
 
     public String senhaFaker(){

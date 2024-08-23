@@ -7,7 +7,6 @@ import automationexercise.page.LoginPage;
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import static storys.LoginStory.*;
 
@@ -23,7 +22,7 @@ public class LoginTest extends BaseTest {
     @Description(CE_LOGIN_01)
     public void test1validarLoginDadosValidos(){
         LoginDto usu =  loginData.loginDadosValidos();     // <- Gerando massa de dados
-        loginPage.preencherCampoEmail(usu.getEmail());
+        loginPage.preencherCampoUsername(usu.getUsername());
         loginPage.preencherCampoSenha(usu.getSenha());
         loginPage.clicarBtnAcessar();
         String msgm = loginPage.validarTextoBtnAposLogin();
@@ -34,20 +33,24 @@ public class LoginTest extends BaseTest {
     @Description(CE_LOGIN_02)
     public void test2validarLoginDadosInvalidos(){
         LoginDto usu =  loginData.LoginDadoDinamicos();
-        loginPage.preencherCampoEmail(usu.getEmail());
+        loginPage.preencherCampoUsername(usu.getUsername());
         loginPage.preencherCampoSenha(usu.getSenha());
         loginPage.clicarBtnAcessar();
         String msgm = loginPage.validarMsgmEmailIncorreto();
         validation.validateText(msgm,"Invalid credentials");
     }
-    /*
+
+
     @Test
     @Description(CE_LOGIN_03)
-    public void test3validarLoginComDadosValidos(){
+    public void test3validarLoginComCampoEmBranco(){
         LoginDto usu =  loginData.loginDadosValidos();
-        String msgm = loginPage.fazerLogin(usu.getEmail(),usu.getSenha());
+        usu.setUsername("");
+        String msgm = loginPage.fazerLogin(usu.getUsername(),usu.getSenha());
         validation.validateText(msgm,"Logout");
     }
+
+    /*
 
     @Test
     @Description(CE_LOGIN_04)

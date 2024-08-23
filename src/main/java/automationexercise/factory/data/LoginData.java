@@ -14,18 +14,19 @@ public class LoginData {
     public LoginDto loginDadosValidos(){
         // Instanciar = conexão com LoginDto
         LoginDto loginDto = new LoginDto();
-        loginDto.setEmail("Admin");
+        loginDto.setUsername("Admin");
         loginDto.setSenha("admin123");
 
         return loginDto;
     }
 
 
+
     // Gerar dados fakes e guardar no DTO correspondente
     public LoginDto LoginDadoDinamicos(){
         // Instanciar = conexão com LoginDto
         LoginDto loginDto = new LoginDto();
-            loginDto.setEmail(dataFakerGeneretor.emailFaker());
+            loginDto.setUsername(dataFakerGeneretor.usernameFaker());
             loginDto.setSenha(dataFakerGeneretor.senhaFaker());
 
         return loginDto;
