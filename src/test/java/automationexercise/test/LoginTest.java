@@ -44,10 +44,11 @@ public class LoginTest extends BaseTest {
     @Test
     @Description(CE_LOGIN_03)
     public void test3validarLoginComCampoEmBranco(){
-        LoginDto usu =  loginData.loginDadosValidos();
-        usu.setUsername("");
-        String msgm = loginPage.fazerLogin(usu.getUsername(),usu.getSenha());
-        validation.validateText(msgm,"Logout");
+        loginPage.clicarBtnAcessar();
+        String msgm1 = loginPage.validarTxtEMBranco1();
+        String msgm2 = loginPage.validarTxtEMBranco2();
+        validation.validateText(msgm1,"Required");
+        validation.validateText(msgm2,"Required");
     }
 
     /*
