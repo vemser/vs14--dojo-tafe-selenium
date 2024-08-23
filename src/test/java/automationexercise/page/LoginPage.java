@@ -48,7 +48,7 @@ public class LoginPage extends Interactions {
     }
 
     public String validarTxtLogintPage() {
-
+        return lerTexto(txtLoginPage);
     }
 
     public String fazerLogin(String username, String senha){

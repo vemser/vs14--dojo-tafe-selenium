@@ -6,7 +6,7 @@ import automationexercise.factory.selenium.*;
 import automationexercise.page.*;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
-import
+
 
 import static storys.LoginStory.CE_LOGIN_01;
 
@@ -49,7 +49,8 @@ public class HomeTest extends BaseTest{
         loginPage.fazerLogin("Admin", "admin123");
         homePage.clicarBotaoDropDownAccount();
         homePage.clicarBotaoLogout();
-
+        String msgm = loginPage.validarTxtLogintPage();
+        validation.validateText("Login", msgm);
     }
 
 
