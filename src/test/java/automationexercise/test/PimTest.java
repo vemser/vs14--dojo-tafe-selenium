@@ -20,13 +20,10 @@ public class PimTest extends BaseTest {
     public void testValidaCadastroEmpregado() {
         loginPage.fazerLogin("Admin", "admin123");
         pimPage.addUsuario();
-
-
-
-
-
-
-
+        pimPage.addUsername();
+        pimPage.addPassword();
+        pimPage.addConfirmPassword();
+        pimPage.saveUser();
     }
 
 }
