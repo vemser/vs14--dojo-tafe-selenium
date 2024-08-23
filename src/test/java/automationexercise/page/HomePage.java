@@ -22,4 +22,10 @@ public class HomePage extends Interactions {
         click(btnAdd);
     }
 
+
+    public String validarTextoBtnAposLogin(){
+        return lerTexto(btnClaim);
+    }
+
+
 }
