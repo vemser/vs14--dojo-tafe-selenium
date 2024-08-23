@@ -18,6 +18,11 @@ public class LoginPage extends Interactions {
     private static final By txtEmBranco1 = By.cssSelector("div:nth-child(2) > div > span");
     private static final By txtEmBranco2 = By.cssSelector("div:nth-child(3) > div > span");
 
+    private static final By btnResetSenha = By.cssSelector(".orangehrm-login-forgot p");
+    private static final By txtEmBranco2 = By.cssSelector("div:nth-child(3) > div > span");
+    private static final By txtEmBranco2 = By.cssSelector("div:nth-child(3) > div > span");
+
+
     public void preencherCampoUsername(String username){
         sendKeys(campoUsername,username);
     }
