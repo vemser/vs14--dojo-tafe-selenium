@@ -16,6 +16,20 @@ public class HomePage extends Interactions {
 
     private static final By headerClaim = By.cssSelector("#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-header > div.oxd-topbar-header-title > span > h6");
 
+    private static final By btnDropDownAccount = By.cssSelector("#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-header > div.oxd-topbar-header-userarea > ul > li > span > i");
+
+    private static final By btnLogout = By.cssSelector("#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-header > div.oxd-topbar-header-userarea > ul > li > ul > li:nth-child(4) > a");
+
+
+
+    public void clicarBotaoDropDownAccount () {
+        click(btnDropDownAccount);
+    }
+
+    public void clicarBotaoLogout () {
+        click(btnLogout);
+    }
+
     public void clicarBotaoClaim (){
         click(btnClaim);
     }

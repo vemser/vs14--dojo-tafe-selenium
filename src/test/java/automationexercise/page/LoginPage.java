@@ -20,6 +20,8 @@ public class LoginPage extends Interactions {
 
     private static final By btnResetSenha = By.cssSelector(".orangehrm-login-forgot p");
 
+    private static final By txtLoginPage = By.cssSelector("#app > div.orangehrm-login-layout > div > div.orangehrm-login-container > div > div.orangehrm-login-slot > h5");
+
 
     public void preencherCampoUsername(String username){
         sendKeys(campoUsername,username);
@@ -45,6 +47,9 @@ public class LoginPage extends Interactions {
         return lerTexto(txtEmBranco1);
     }
 
+    public String validarTxtLogintPage() {
+
+    }
 
     public String fazerLogin(String username, String senha){
         preencherCampoUsername(username);
