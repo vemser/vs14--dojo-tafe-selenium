@@ -6,15 +6,15 @@ import org.openqa.selenium.By;
 public class LoginPage extends Interactions {
 
     private static final By campoEmail =
-    By.cssSelector("imput[name=\"username\"]");
+    By.cssSelector("input[name=\"username\"]");
     private static final By campoSenha =
-    By.cssSelector("imput[name=\"password\"]");
+    By.cssSelector("input[name=\"password\"]");
     private static final By btnAcessar =
-    By.cssSelector(".orangehrm-login-slot > div.orangehrm-login-form > form > div:nth-child(2) > div > div:nth-child(2) > input");
+    By.cssSelector("#app > div.orangehrm-login-layout > div > div.orangehrm-login-container > div > div.orangehrm-login-slot > div.orangehrm-login-form > form > div.oxd-form-actions.orangehrm-login-action > button");
     private static final By TextMsgmBtn =
     By.cssSelector("#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-header > div.oxd-topbar-header-title > span > h6");
     private static final By msgmEmailIncorreto =
-    By.cssSelector("#form > div > div > div.col-sm-4.col-sm-offset-1 > div > form > p");
+    By.cssSelector("#app > div.orangehrm-login-layout > div > div.orangehrm-login-container > div > div.orangehrm-login-slot > div.orangehrm-login-form > div > div.oxd-alert.oxd-alert--error > div.oxd-alert-content.oxd-alert-content--error > p");
 
     public void preencherCampoEmail(String email){
         sendKeys(campoEmail,email);

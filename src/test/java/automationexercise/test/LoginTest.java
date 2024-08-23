@@ -30,7 +30,7 @@ public class LoginTest extends BaseTest {
         validation.validateText(msgm,"Dashboard");
     }
 
-    /*@Test
+    @Test
     @Description(CE_LOGIN_02)
     public void test2validarLoginDadosInvalidos(){
         LoginDto usu =  loginData.LoginDadoDinamicos();
@@ -38,9 +38,9 @@ public class LoginTest extends BaseTest {
         loginPage.preencherCampoSenha(usu.getSenha());
         loginPage.clicarBtnAcessar();
         String msgm = loginPage.validarMsgmEmailIncorreto();
-        validation.validateText(msgm,"Your email or passwod is incorrect!");
+        validation.validateText(msgm,"Invalid credentials");
     }
-
+    /*
     @Test
     @Description(CE_LOGIN_03)
     public void test3validarLoginComDadosValidos(){
