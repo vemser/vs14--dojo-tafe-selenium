@@ -19,24 +19,18 @@ public class HomeTest extends BaseTest{
     @Test
     @Description(CE_LOGIN_01)
     public void testValidarHeaderClaim(){
-        LoginDto usu =  loginData.loginDadosValidos();     // <- Gerando massa de dados
-        loginPage.preencherCampoUsername(usu.getUsername());
-        loginPage.preencherCampoSenha(usu.getSenha());
-        loginPage.clicarBtnAcessar();
+        loginPage.fazerLogin("Admin", "admin123");
         homePage.clicarBotaoClaim();
-        String msgm = homePage.validarBtnTextAdm();
+        String msgm = homePage.validarBtnTextClaim();
         validation.validateText(msgm,"Claim");
     }
 
     @Test
     @Description(CE_LOGIN_01)
     public void testValidarHeaderAdmin(){
-        LoginDto usu =  loginData.loginDadosValidos();     // <- Gerando massa de dados
-        loginPage.preencherCampoUsername(usu.getUsername());
-        loginPage.preencherCampoSenha(usu.getSenha());
-        loginPage.clicarBtnAcessar();
-        homePage.clicarBotaoClaim();
-        String msgm = homePage.validarTextoBtnAposLogin();
-        validation.validateText(msgm,"Claim");
+        loginPage.fazerLogin("Admin", "admin123");
+        homePage.clicarBotaoAdmin();
+        String msgm = homePage.pegarTextoHeaderAdmin();
+        validation.validateText(msgm,"Admin");
     }
 }

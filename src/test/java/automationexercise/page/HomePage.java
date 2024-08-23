@@ -10,6 +10,10 @@ public class HomePage extends Interactions {
 
     private static final By btnAdd = By.cssSelector("#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-header-container > button");
 
+    private static final By headerAdmin = By.cssSelector("#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-header > div.oxd-topbar-header-title > span > h6.oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module");
+
+    private static final By headerClaim = By.cssSelector("er > div.oxd-topbar-header-title > span > h6.oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module");
+
     public void clicarBotaoClaim (){
         click(btnClaim);
     }
@@ -23,9 +27,23 @@ public class HomePage extends Interactions {
     }
 
 
-    public String validarTextoBtnAposLogin(){
+    public String validarBtnTextClaim(){
         return lerTexto(btnClaim);
     }
+
+    public String validarBtnTextAdm(){
+        return lerTexto(btnAdmin);
+    }
+
+    public String pegarTextoHeaderAdmin(){
+        return lerTexto(headerAdmin);
+    }
+
+    public String pegarTextoHeaderClaim(){
+        return lerTexto(headerAdmin);
+    }
+
+
 
 
 }
