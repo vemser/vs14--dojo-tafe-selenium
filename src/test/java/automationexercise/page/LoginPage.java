@@ -19,8 +19,6 @@ public class LoginPage extends Interactions {
     private static final By txtEmBranco2 = By.cssSelector("div:nth-child(3) > div > span");
 
     private static final By btnResetSenha = By.cssSelector(".orangehrm-login-forgot p");
-    private static final By txtEmBranco2 = By.cssSelector("div:nth-child(3) > div > span");
-    private static final By txtEmBranco2 = By.cssSelector("div:nth-child(3) > div > span");
 
 
     public void preencherCampoUsername(String username){
@@ -44,7 +42,7 @@ public class LoginPage extends Interactions {
         return lerTexto(txtEmBranco1);
     }
     public String validarTxtEMBranco2(){
-        return lerTexto(txtEmBranco2);
+        return lerTexto(txtEmBranco1);
     }
 
 

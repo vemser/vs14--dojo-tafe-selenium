@@ -24,9 +24,6 @@ public class EsqueciSenhaPage extends Interactions {
         click(btnEnviarReset);
     }
 
-    public String validarMsgmEmailIncorreto(){
-        return lerTexto();
-    }
 
     public String validarTxtEMBranco(){
         return lerTexto(textCampoRequerido);

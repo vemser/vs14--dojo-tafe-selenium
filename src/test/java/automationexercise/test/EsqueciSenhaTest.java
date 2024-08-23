@@ -31,7 +31,7 @@ public class EsqueciSenhaTest extends BaseTest {
     @Description(CE_LOGIN_03)
     public void test3validarEsqueciSenhaEmBranco(){
         String msgm = esqueciSenhaPage.fazerResetVazio();
-        validation.validateText(msgm,"Reset Password link sent successfully");
+        validation.validateText(msgm,"Required");
     }
 
 
