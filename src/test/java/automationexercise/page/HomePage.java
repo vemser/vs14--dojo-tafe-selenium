@@ -12,7 +12,9 @@ public class HomePage extends Interactions {
 
     private static final By headerAdmin = By.cssSelector("#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-header > div.oxd-topbar-header-title > span > h6.oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module");
 
-    private static final By headerClaim = By.cssSelector("er > div.oxd-topbar-header-title > span > h6.oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module");
+    private static final By headerBuzz = By.cssSelector("#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-header > div.oxd-topbar-header-title > span > h6");
+
+    private static final By headerClaim = By.cssSelector("#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-header > div.oxd-topbar-header-title > span > h6");
 
     public void clicarBotaoClaim (){
         click(btnClaim);
@@ -26,6 +28,21 @@ public class HomePage extends Interactions {
         click(btnAdd);
     }
 
+    public void clickHeaderBuzz(){
+        click(headerBuzz);
+    }
+    public void clickHeaderClaim(){
+        click(headerClaim);
+    }
+
+
+    public String validarTextoBuzz(){
+        return  lerTexto(headerBuzz);
+
+    }
+     public String validarTextoClaim(){
+        return lerTexto(headerClaim);
+     }
 
     public String validarBtnTextClaim(){
         return lerTexto(btnClaim);

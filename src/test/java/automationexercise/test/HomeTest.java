@@ -33,4 +33,13 @@ public class HomeTest extends BaseTest{
         String msgm = homePage.pegarTextoHeaderAdmin();
         validation.validateText(msgm,"Admin");
     }
+
+    @Test
+    @Description(CE_LOGIN_01)
+    public void testValidarHeaderByzz(){
+        loginPage.fazerLogin("Admin", "admin123");
+        homePage.clickHeaderBuzz();
+        String msgm = homePage.validarTextoBuzz();
+        validation.validateText(msgm,"Buzz");
+    }
 }
