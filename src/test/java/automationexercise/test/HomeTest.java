@@ -40,6 +40,6 @@ public class HomeTest extends BaseTest{
         loginPage.fazerLogin("Admin", "admin123");
         homePage.clickHeaderBuzz();
         String msgm = homePage.validarTextoBuzz();
-        validation.validateText(msgm,"Buzz");
+        validation.validateText("Buzz", msgm);
     }
 }
