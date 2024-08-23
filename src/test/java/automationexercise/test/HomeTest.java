@@ -42,4 +42,7 @@ public class HomeTest extends BaseTest{
         String msgm = homePage.validarTextoBuzz();
         validation.validateText("Buzz", msgm);
     }
+
+
+
 }
